@@ -2,6 +2,6 @@ import time
 
 
 def say_hello():
-    print("this got")
+    print("another")
     time.sleep(2)
-    print("updated!!!")
+    print("update?!!")
