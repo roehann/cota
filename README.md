@@ -31,6 +31,7 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 4. Access your ThingsBoard account and navigate to the device corresponding to the device access token specified in your `settings.toml` file. Create a new device if necessary and add its access token to your `settings.toml` file and repeat the third step.
 5. Ensure that your device is associated with a profile, typically the `default` profile which is preconfigured.
 6. Create a copy of the `main.py` file and add your modules or custom code as you wish, e.g.:
+   
 	```py
 	from module import your_custom_function
 	
@@ -42,10 +43,11 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 	    # Custom code comes here, e.g.:
 	    your_custom_function()
 	```
-7. Create a public GitHub-Repository which contains a `main` branch.   
-8. Push the configured `main.py` file and the `lib` folder, as well as your custom modules inside your repo.
-9. In ThingsBoard, add a new OTA package under `Advanced features` > `OTA updates`. Add a custom firmware- title and version number as well as the device profile and make sure the `Package type` is set to `Firmware`. Now change to `Use external URL` and  add the URL to your GitHub repo under `Direct URL`.
-10. Under `profiles` you now have to add the firmware-package to a specific profile to actually update the firmware of the device(s).  
+ 
+8. Create a public GitHub-Repository which contains a `main` branch.   
+9. Push the configured `main.py` file and the `lib` folder, as well as your custom modules inside your repo.
+10. In ThingsBoard, add a new OTA package under `Advanced features` > `OTA updates`. Add a custom firmware- title and version number as well as the device profile and make sure the `Package type` is set to `Firmware`. Now change to `Use external URL` and  add the URL to your GitHub repo under `Direct URL`.
+11. Under `profiles` you now have to add the firmware-package to a specific profile to actually update the firmware of the device(s).  
 
 > **Important**
 > Make sure your code is inside the `main` branch. Other branch names will cause problems.
