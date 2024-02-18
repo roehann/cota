@@ -44,9 +44,9 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 	```
  
 4. Perform a hard reset, similar to hitting the RESET button, on the microcontroller and make sure the device is connected to Wi-Fi.
-5. Ensure that your ThingsBoard device is associated with a profile, typically the `default` profile which is preconfigured.
-6. Create a public GitHub-Repository which contains a `main` branch.
-7. Push the code or modules that need to be saved or overwritten on the microcontroller to your GitHub repository.
+5. Create a public GitHub-Repository which contains a `main` branch.
+6. Push the code or modules that need to be saved or overwritten on the microcontroller to your GitHub repository.
+7. Ensure that your ThingsBoard device is associated with a profile, typically the `default` profile which is preconfigured.
 8. In ThingsBoard, add a new OTA package under `Advanced features` > `OTA updates`. Add a custom firmware- title and version number as well as the device profile and make sure the `Package type` is set to `Firmware`. Now change to `Use external URL` and add the URL to your GitHub repo under `Direct URL`.
 9. Under `profiles` you now have to add the firmware-package to a specific profile to actually update the firmware of the device(s). **The microcontroller will now download the files in your GitHub repo and save it on the filesystem**.
 10. After making modifications to your code in the repository, revisit step 8 and ensure that you either update the firmware title or version when you create a new OTA package on ThingsBoard. This step is crucial for enabling the microcontroller to detect the updated firmware.
