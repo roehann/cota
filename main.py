@@ -24,7 +24,7 @@ def main():
                 # Add your custom code here.
                 pass
         except ConnectionError as e:
-            # Handle request connection errors here, for example you might try to reconnect to Wi-Fi (Optional).
+            # Handle request connection errors here, e.g. you might try to reconnect to Wi-Fi (Optional).
             pass   
         except ota.OverTheAirUpdateError as e:
             # Handle exceptions related to the firmware download process (Optional).
