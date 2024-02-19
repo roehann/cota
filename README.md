@@ -61,6 +61,8 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 The `Client attributes` and `Shared attributes` sections of a specific device within ThingsBoard store details regarding the currently installed firmware and the uploaded firmware.
 You can also import a [predefined dashboard](https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/firmware.json) to view the firmware download progress in ThingsBoard.
 
+After pushing your files to your repository, please note that it may take some time for the GitHub API to reflect these updates. Hence, after pushing the files to your repository and immediately publishing the package via ThingsBoard, the file hashes may not initially match, potentially resulting in errors on the microcontroller. These errors can be caught using the `OverTheAirUpdateError` exception handler in the `main.py` file. However, after a few minutes, the hash values should be updated and the errors resolved.
+
 ## License
 
 This project is licensed under the terms of the MIT license.
