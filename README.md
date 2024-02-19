@@ -30,6 +30,8 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 3. Add your own modules to the microcontroller and edit the content of the `main.py` file e.g. as follows:
    
 	```py
+ 	...
+ 
 	from your_module import your_custom_function
 	
 	...
@@ -43,7 +45,7 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 	    ...
 	```
  
-4. Perform a hard reset, similar to hitting the RESET button, on the microcontroller and make sure the device is connected to Wi-Fi.
+4. Perform a hard reset, similar to hitting the RESET button, on the microcontroller and make sure the device is connected to Wi-Fi and that your script is running.
 5. Create a public GitHub-Repository which contains a `main` branch.
 6. Push the modules that need to be copied to or modified on the microcontroller to your GitHub repository. **Please note that the microcontroller will delete everything from the local filesystem, except for the previously named [files and folder](#repofiles) which can be updated, after downloading these repository files**. For example, it is not mandatory to define the `boot.py` or `settings.toml` file in your repository; however, they can be updated if needed.
 8. Ensure that your ThingsBoard device is associated with a profile, typically the `default` profile which is preconfigured.
