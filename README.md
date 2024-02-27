@@ -44,7 +44,8 @@ CircuitPython Over-the-air (OTA) updates via ThingsBoard and GitHub for seamless
 	    your_custom_function()
 	    ...
 	```
- 
+ 	You can also look into [this](https://github.com/roehann/cota-example) repo that features a minimal working example which you can use for your repo.
+
 4. Perform a hard reset, similar to hitting the RESET button, on the microcontroller and make sure the device is connected to Wi-Fi and that your script is running.
 5. Create a public GitHub-Repository which contains a `main` branch.
 6. Push the modules that need to be copied to or modified on the microcontroller to your GitHub repository. **Please note that the microcontroller will delete everything from the local filesystem, except for the previously named [files and folder](#repofiles), after downloading these repository files**. For example, it is not mandatory to define the `boot.py` or `settings.toml` file in your repository; however, they can be updated if needed.
